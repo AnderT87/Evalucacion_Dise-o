@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Modelo 3D</title>
+  
+  <!-- Enlace a la hoja de estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Carga del componente <model-viewer> -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <main class="viewer-wrapper">
+    <!-- Encabezado superior -->
+    <header class="header">
+      <div class="badge">Vista Previa</div>
+      <h1>Mi Modelo 3D</h1>
+      <p>Haz clic y arrastra para rotar la escena</p>
+    </header>
+
+    <!-- Contenedor 3D -->
+    <div class="container">
+      <model-viewer 
+        src="meshy-model-2026-11-09T19-07-53-801Z.glb" 
+        alt="Mi Modelo 3D"
+        camera-controls 
+        auto-rotate 
+        shadow-intensity="1.2"
+        shadow-softness="0.8"
+        exposure="1"
+        ar>
+      </model-viewer>
+    </div>
+
+    <!-- Barra de información inferior -->
+    <footer class="footer-info">
+      <span>🖱️ Clic + Arrastrar: Rotar</span>
+      <span>🔍 Rueda del mouse: Zoom</span>
+    </footer>
+  </main>
+
+</body>
+</html>
